@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import lombok.Getter;
 
 @Getter
-public class CompanyDataDto {
+public class CompanyDataDTO {
   private String country;
   private String currency;
   private String estimateCurreny;
