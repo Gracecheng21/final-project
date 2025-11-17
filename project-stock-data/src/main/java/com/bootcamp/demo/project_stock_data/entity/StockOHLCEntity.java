@@ -1,5 +1,6 @@
 package com.bootcamp.demo.project_stock_data.entity;
 
+import java.time.LocalDate;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,16 +22,18 @@ public class StockOHLCEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+  @Column(unique = true)
+  private LocalDate date;
   private String symbol;
-  @Column(name = "open", nullable = false)
+  @Column(name = "open_price", nullable = false)
   private Double openPrice;
-  @Column(name = "high", nullable = false)
+  @Column(name = "high_price", nullable = false)
   private Double highPrice;
-  @Column(name = "low", nullable = false)
+  @Column(name = "low_price", nullable = false)
   private Double lowPrice;
-  @Column(name = "close", nullable = false)
+  @Column(name = "close_price", nullable = false)
   private Double closePrice;
-  private Double volume;
+  private Long volume;
 
   @ManyToOne
   @JoinColumn(name = "stock_id", nullable = false)

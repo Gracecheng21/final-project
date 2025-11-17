@@ -19,7 +19,7 @@ public class StockEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  @Column(length = 20, name = "code", unique = true, nullable = false)
+  @Column(length = 20, unique = true, nullable = false)
   private String symbol;
   @Column(length = 2, nullable = false)
   private String market; // US / HK
