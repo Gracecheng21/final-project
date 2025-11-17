@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driverClassName: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/final_project"
+    username: "postgres"
+    password: "admin1234"
+  jpa:
+    show-sql: false
+    hibernate.ddl-auto: update
+  data:
+    redis:
+      host: redis-container
+      # host: localhost
+      port: 6379

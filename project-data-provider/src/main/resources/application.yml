@@ -1,3 +1,5 @@
+server:
+  port: 8080
 # https://finnhub.io/api/v1/quote?symbol=AAPL&token=d43arkpr01qvk0jb1gtgd43arkpr01qvk0jb1gu0
 # https://finnhub.io/api/v1/stock/profile2?symbol=AAPL&token=d43arkpr01qvk0jb1gtgd43arkpr01qvk0jb1gu0
 api-service:

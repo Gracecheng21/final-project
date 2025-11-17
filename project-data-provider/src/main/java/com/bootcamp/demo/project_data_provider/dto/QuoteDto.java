@@ -2,7 +2,6 @@ package com.bootcamp.demo.project_data_provider.dto;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -15,6 +14,5 @@ public class QuoteDto {
   private Double lowPrice;
   private Double closePrice;
   @Builder.Default
-  private String dateTime = ZonedDateTime.now(ZoneId.of("Asia/Hong_Kong"))
-      .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss Z z"));
+  private ZonedDateTime dateTime = ZonedDateTime.now(ZoneId.of("Asia/Hong_Kong"));
 }
